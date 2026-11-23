@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b63">
+  <meta name="description" content="VitalReach Mobile Phlebotomy — request convenient home blood collection in Kenya. Your Health, Our Reach. Care at Your Doorstep.">
+  <title>VitalReach Mobile Phlebotomy | Care at Your Doorstep</title>
+  <style>
+    :root {
+      --navy:#102b63; --navy-dark:#091b43; --red:#d7192d;
+      --gold:#e2b83f; --ink:#17233b; --muted:#65718a;
+      --pale:#f4f7fc; --white:#fff; --line:#e3e9f2;
+      --shadow:0 18px 50px rgba(16,43,99,.12); --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,select,textarea{font:inherit}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topline{background:var(--navy-dark);color:#eaf0ff;font-size:.88rem}
+    .topline .container{display:flex;justify-content:space-between;gap:12px;padding:9px 0;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;color:var(--navy);letter-spacing:-.04em;font-size:1.35rem}
+    .brand-mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,var(--red),#a80d20);display:grid;place-items:center;color:white;font-size:1.35rem;box-shadow:0 6px 16px #d7192d40}
+    .brand small{display:block;font-size:.61rem;letter-spacing:.12em;color:var(--muted);font-weight:800;margin-top:-4px}
+    .navlinks{display:flex;align-items:center;gap:25px;font-size:.94rem;font-weight:650;color:#394761}
+    .navlinks a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:999px;border:0;font-weight:800;cursor:pointer;transition:.2s;white-space:nowrap}
+    .btn-primary{background:var(--red);color:white;box-shadow:0 9px 20px #d7192d30}
+    .btn-primary:hover{background:#b91023;transform:translateY(-2px)}
+    .btn-outline{border:1.5px solid #cbd5e6;color:var(--navy);background:white}
+    .btn-outline:hover{border-color:var(--navy);background:#f5f8ff}
+    .menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px;color:var(--navy);font-size:1.2rem}
+    .hero{padding:54px 0 58px;background:radial-gradient(circle at 85% 10%,#e9efff 0,transparent 32%),linear-gradient(180deg,#fbfcff,#fff)}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--red);font-size:.78rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:25px;height:2px;background:var(--gold)}
+    h1{font-size:clamp(2.65rem,5vw,4.7rem);line-height:1.04;letter-spacing:-.055em;color:var(--navy);margin:17px 0}
+    h1 span{color:var(--red)}
+    .lead{font-size:1.12rem;color:#5b6880;max-width:560px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+    .trustline{display:flex;gap:18px;flex-wrap:wrap;color:#56637a;font-size:.88rem;font-weight:650}
+    .trustline span:before{content:"✓";color:#16835a;font-weight:900;margin-right:7px}
+    .hero-image{position:relative}
+    .hero-image img{width:100%;aspect-ratio:1.35;object-fit:cover;object-position:center;border-radius:28px;box-shadow:var(--shadow);border:7px solid white}
+    .image-note{position:absolute;left:-18px;bottom:24px;background:white;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);font-weight:800;color:var(--navy);max-width:220px}
+    .image-note small{display:block;color:var(--muted);font-weight:500}
+    .features{padding:25px 0;background:var(--navy);color:white}
+    .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .feature{display:flex;align-items:center;gap:12px;padding:8px 4px}
+    .feature-icon{width:43px;height:43px;border:1px solid #ffffff55;border-radius:14px;display:grid;place-items:center;font-size:1.25rem;flex:none}
+    .feature strong{display:block;font-size:.95rem}.feature small{color:#c9d5f2}
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:690px;margin:0 auto 42px}
+    .section-head h2{font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-.04em;color:var(--navy);line-height:1.12;margin:12px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);padding:27px;background:white;box-shadow:0 8px 26px #102b6308}
+    .card-icon{width:50px;height:50px;border-radius:16px;background:#eef2ff;color:var(--navy);display:grid;place-items:center;font-size:1.45rem;margin-bottom:17px}
+    .card h3{color:var(--navy);margin:0 0 8px;font-size:1.13rem}
+    .card p{color:var(--muted);font-size:.95rem;margin:0}
+    .how{background:var(--pale)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{background:white;border:1px solid var(--line);border-radius:18px;padding:23px}
+    .step-number{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:white;font-weight:900;margin-bottom:15px}
+    .step h3{margin:0 0 7px;color:var(--navy);font-size:1.02rem}
+    .step p{margin:0;color:var(--muted);font-size:.91rem}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+    .about-panel{background:linear-gradient(145deg,var(--navy),#1d438b);border-radius:28px;padding:36px;color:white;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
+    .about-panel .big{font-size:3.2rem;font-weight:900;line-height:1;color:#fff}
+    .about-panel p{color:#d8e2fb}
+    .about-copy h2{font-size:2.45rem;line-height:1.1;letter-spacing:-.04em;color:var(--navy);margin:12px 0}
+    .about-copy p{color:var(--muted)}
+    .checklist{list-style:none;padding:0;margin:22px 0}
+    .checklist li{margin:11px 0;color:#46536c}.checklist li:before{content:"✓";color:#16835a;font-weight:900;margin-right:10px}
+    .booking{background:#f6f8fc}
+    .booking-wrap{display:grid;grid-template-columns:.78fr 1.22fr;gap:28px;align-items:stretch}
+    .booking-info{background:var(--navy);color:white;border-radius:24px;padding:32px}
+    .booking-info h2{font-size:2.15rem;line-height:1.12;margin:12px 0}
+    .booking-info p{color:#d4def5}
+    .contact-line{padding:14px 0;border-top:1px solid #ffffff30;color:#f2f5ff}
+    .form-card{background:white;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:var(--shadow)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field.full{grid-column:1/-1}
+    label{font-size:.88rem;font-weight:750;color:#33415d}
+    input,select,textarea{width:100%;border:1px solid #d8e0ec;border-radius:12px;padding:12px 13px;background:white;color:var(--ink);outline:none}
+    input:focus,select:focus,textarea:focus{border-color:#6484ca;box-shadow:0 0 0 3px #6484ca20}
+    textarea{min-height:100px;resize:vertical}
+    .form-note{font-size:.8rem;color:var(--muted);margin:13px 0}
+    .consent{display:flex;align-items:flex-start;gap:9px;font-size:.83rem;color:#53617a;margin:14px 0}
+    .consent input{width:auto;margin-top:4px}
+    .faq-list{max-width:820px;margin:auto}
+    details{border-bottom:1px solid var(--line);padding:18px 2px}
+    summary{cursor:pointer;font-weight:800;color:var(--navy)}
+    details p{color:var(--muted);margin:12px 0 0}
+    .contact-band{background:linear-gradient(120deg,#fff7f7,#f1f5ff);padding:45px 0}
+    .contact-inner{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}
+    .contact-inner h2{color:var(--navy);margin:0;font-size:2rem}
+    footer{background:var(--navy-dark);color:#dce5fa;padding:48px 0 20px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px;padding-bottom:30px}
+    footer h3{color:white;margin-top:0}
+    footer p,footer a{color:#c1cce5;font-size:.92rem}
+    footer a:hover{color:white}
+    .footer-links{display:grid;gap:9px}
+    .copyright{border-top:1px solid #ffffff25;padding-top:18px;color:#9eafd2;font-size:.82rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:30;background:#168b55;color:white;border-radius:999px;padding:13px 18px;font-weight:850;box-shadow:0 10px 28px #168b5544}
+    .notice{background:#fff8e7;border-left:4px solid var(--gold);padding:13px 16px;border-radius:8px;color:#67552b;font-size:.85rem;margin-top:20px}
+    @media(max-width:900px){.hero-grid,.about-grid,.booking-wrap{grid-template-columns:1fr}.hero-image{max-width:650px}.feature-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.container{width:min(100% - 28px,1160px)}.topline .container{justify-content:center;text-align:center}.nav{height:68px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:18px 22px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}.navlinks.open{display:flex}.navlinks .btn{width:100%}.hero{padding:42px 0}.hero-grid{gap:28px}.image-note{left:8px;bottom:10px}.feature-grid{grid-template-columns:1fr 1fr;gap:8px}.feature{align-items:flex-start}.feature-icon{width:36px;height:36px;font-size:1rem}.cards,.steps{grid-template-columns:1fr}.about-panel{min-height:240px}.form-card,.booking-info{padding:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}section{padding:62px 0}.footer-grid{grid-template-columns:1fr;gap:22px}.contact-inner h2{font-size:1.65rem}.whatsapp-float{right:12px;bottom:12px;padding:11px 14px;font-size:.88rem}}
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="container"><span>Serving clients across selected areas in Kenya</span><span>Call: <a href="tel:+254704173317">+254 704 173 317</a> &nbsp; | &nbsp; <a href="tel:+254750412126">+254 750 412 126</a></span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="VitalReach home"><span class="brand-mark">✚</span><span>VitalReach<small>MOBILE PHLEBOTOMY</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="navlinks" id="navLinks">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#how">How It Works</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#booking">Request a Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Mobile blood collection in Kenya</div>
+          <h1>Your Health,<br><span>Our Reach.</span></h1>
+          <p class="lead">Care at your doorstep. Request convenient blood sample collection at a location that works for you, subject to service availability and appointment confirmation.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#booking">Request a Home Visit <span>→</span></a><a class="btn btn-outline" href="https://wa.me/254750412126" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+          <div class="trustline"><span>Home collection requests</span><span>Professional service</span><span>Convenient scheduling</span></div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/vitalreach-banner.jpeg" alt="VitalReach Mobile Phlebotomy promotional banner showing a phlebotomist assisting a client">
+          <div class="image-note">Care at your doorstep<small>Your Health, Our Reach.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="features"><div class="container feature-grid">
+      <div class="feature"><div class="feature-icon">⌂</div><div><strong>Home Blood Collection</strong><small>Convenience at your location</small></div></div>
+      <div class="feature"><div class="feature-icon">♢</div><div><strong>Safe & Professional</strong><small>Care-focused service</small></div></div>
+      <div class="feature"><div class="feature-icon">◷</div><div><strong>Convenient Scheduling</strong><small>Request a suitable time</small></div></div>
+      <div class="feature"><div class="feature-icon">♡</div><div><strong>Client-Focused</strong><small>Respectful support</small></div></div>
+    </div></div>
+
+    <section id="services"><div class="container">
+      <div class="section-head"><div class="eyebrow">What we do</div><h2>Mobile collection made more convenient</h2><p>VitalReach helps clients request blood sample collection at home, work or another agreed location. Explore our test enquiry categories and confirm the specific service and arrangements with the team before your appointment.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">♡</div><h3>Wellness & Preventive Screening</h3><p>Afya Huru Wellness Packages, Executive Wellness Screening, Preventive Health Screening and Lifestyle Disease Screening.</p></article>
+        <article class="card"><div class="card-icon">◉</div><h3>Diabetes Testing</h3><p>HbA1c Testing, Blood Sugar Testing and Diabetes Monitoring.</p></article>
+        <article class="card"><div class="card-icon">♥</div><h3>Heart Health Testing</h3><p>Lipid Profile, Cholesterol Testing and Cardiac Risk Assessment.</p></article>
+        <article class="card"><div class="card-icon">✿</div><h3>Women's Health</h3><p>Hormonal Testing, Fertility Testing and Pregnancy Testing.</p></article>
+        <article class="card"><div class="card-icon">♙</div><h3>Men's Health</h3><p>PSA Testing and Hormonal Assessment.</p></article>
+        <article class="card"><div class="card-icon">▣</div><h3>General Diagnostics</h3><p>Full Haemogram, Liver Function Tests, Kidney Function Tests, Thyroid Function Tests and Vitamin Testing.</p></article>
+        <article class="card"><div class="card-icon">▥</div><h3>Corporate Wellness</h3><p>Employee Wellness Programmes, Occupational Health Testing and Medical Screening Events.</p></article>
+      </div>
+      <div class="notice"><strong>Important:</strong> The website is for service enquiries and appointment requests. Test availability, sample handling, laboratory processing, prices and result timelines must be confirmed directly with VitalReach. Do not submit diagnoses, medical records or other sensitive medical details through this form.</div>
+    </div></section>
+
+    <section class="how" id="how"><div class="container">
+      <div class="section-head"><div class="eyebrow">Simple steps</div><h2>How it works</h2><p>Start with an enquiry and the VitalReach team can confirm whether the requested service is available.</p></div>
+      <div class="steps">
+        <div class="step"><div class="step-number">1</div><h3>Send a request</h3><p>Complete the short form or contact the team by phone or WhatsApp.</p></div>
+        <div class="step"><div class="step-number">2</div><h3>Confirm details</h3><p>Discuss the requested test, location, preparation guidance, fees and available appointment times.</p></div>
+        <div class="step"><div class="step-number">3</div><h3>Collection visit</h3><p>If confirmed, the team arranges the visit and explains what to expect.</p></div>
+        <div class="step"><div class="step-number">4</div><h3>Follow laboratory guidance</h3><p>Ask the team how the sample will be processed and how results will be provided.</p></div>
+      </div>
+    </div></section>
+
+    <section id="about"><div class="container about-grid">
+      <div class="about-panel"><div><div class="eyebrow" style="color:#f3d36f">About VitalReach</div><div class="big">Care<br>comes to you.</div></div><p>Your Health, Our Reach. Care at Your Doorstep.</p></div>
+      <div class="about-copy"><div class="eyebrow">Our approach</div><h2>Healthcare convenience, with people at the centre.</h2><p>VitalReach Mobile Phlebotomy aims to make blood collection more convenient by bringing collection services closer to clients. The focus is on respectful communication, clear appointment arrangements and professional service.</p><ul class="checklist"><li>Convenient appointment requests</li><li>Clear communication before a visit</li><li>Respect for client privacy and consent</li><li>Coordination around available collection services</li></ul><a class="btn btn-primary" href="#booking">Make an Enquiry</a></div>
+    </div></section>
+
+    <section class="booking" id="booking"><div class="container">
+      <div class="section-head"><div class="eyebrow">Get started</div><h2>Request a home collection visit</h2><p>Share your contact and appointment preferences. Your request will open in WhatsApp for you to review and send.</p></div>
+      <div class="booking-wrap">
+        <aside class="booking-info"><div class="eyebrow" style="color:#f3d36f">Talk to our team</div><h2>Let's arrange a convenient time.</h2><p>Have a question before booking? Contact VitalReach directly to confirm service areas, test availability and appointment details.</p>
+          <div class="contact-line">☎ &nbsp; <a href="tel:+254704173317">+254 704 173 317</a></div>
+          <div class="contact-line">WhatsApp &nbsp; <a href="https://wa.me/254750412126" target="_blank" rel="noopener">+254 750 412 126</a></div>
+          <div class="contact-line">📍 &nbsp; 3rd Parklands Avenue, PMC, Kenya</div>
+          <div class="contact-line">◷ &nbsp; Every day, 8:00 AM – 6:00 PM</div>
+          <div class="contact-line">✉ &nbsp; <a href="mailto:vitalreachlab@gmail.com">vitalreachlab@gmail.com</a></div>
+          <div class="contact-line">Pricing: enquire by calling or WhatsApp</div>
+        </aside>
+        <form class="form-card" id="bookingForm">
+          <div class="form-grid">
+            <div class="field"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" required maxlength="80" placeholder="Your name"></div>
+            <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" autocomplete="tel" required maxlength="25" placeholder="+254..."></div>
+            <div class="field"><label for="location">Visit location / area *</label><input id="location" name="location" required maxlength="120" placeholder="Town, estate or area"></div>
+            <div class="field"><label for="visitType">Preferred visit type</label><select id="visitType" name="visitType"><option>Home visit</option><option>Workplace visit</option><option>Other location</option></select></div>
+            <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date"></div>
+            <div class="field"><label for="time">Preferred time</label><select id="time" name="time"><option value="">Select a time</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Flexible</option></select></div>
+            <div class="field full"><label for="service">Service / test enquiry *</label><input id="service" name="service" required maxlength="120" placeholder="Enter the service or test you want to enquire about"></div>
+            <div class="field full"><label for="message">Additional booking notes (optional)</label><textarea id="message" name="message" maxlength="300" placeholder="Only include practical booking information. Do not enter diagnoses or private medical details."></textarea></div>
+          </div>
+          <label class="consent"><input type="checkbox" id="consent" required><span>I agree to share these contact and booking details with VitalReach for the purpose of responding to this appointment request.</span></label>
+          <p class="form-note">Selecting the button opens WhatsApp with your request. Review the message and press Send in WhatsApp. This form does not itself confirm an appointment.</p>
+          <button class="btn btn-primary" type="submit">Continue to WhatsApp →</button>
+          <div id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div></section>
+
+    <section id="faq"><div class="container"><div class="section-head"><div class="eyebrow">Helpful information</div><h2>Frequently asked questions</h2><p>For details specific to your request, please contact the VitalReach team.</p></div>
+      <div class="faq-list">
+        <details><summary>How do I request a home visit?</summary><p>Complete the request form above or call/WhatsApp the team. Your appointment is only confirmed after VitalReach responds and agrees on the arrangements.</p></details>
+        <details><summary>Which areas do you cover?</summary><p>Contact the team with your town or area to confirm current service coverage and any applicable travel arrangements.</p></details>
+        <details><summary>Can I request a particular blood test?</summary><p>Enter the test name in the enquiry form. The team will confirm whether collection can be arranged and whether any preparation instructions apply. Follow instructions from your healthcare professional or laboratory.</p></details>
+        <details><summary>When will I receive my results?</summary><p>Result availability depends on the test and the laboratory processing it. Ask the team for the expected timeline and the approved method for receiving results.</p></details>
+        <details><summary>Does submitting the form confirm my booking?</summary><p>No. It sends an enquiry through WhatsApp. Wait for direct confirmation from VitalReach before relying on an appointment.</p></details>
+      </div>
+    </div></section>
+
+    <div class="contact-band" id="contact"><div class="container contact-inner"><div><div class="eyebrow">Contact VitalReach</div><h2>Need help arranging a visit?</h2><p style="margin:7px 0 0;color:#65718a">3rd Parklands Avenue, PMC · Open daily 8:00 AM–6:00 PM</p></div><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="tel:+254704173317">Call Us</a><a class="btn btn-outline" href="https://wa.me/254750412126" target="_blank" rel="noopener">WhatsApp</a></div></div></div>
+  </main>
+
+  <footer><div class="container">
+    <div class="footer-grid">
+      <div><a class="brand" href="#home" style="color:white"><span class="brand-mark">✚</span><span>VitalReach<small style="color:#b8c7e8">MOBILE PHLEBOTOMY</small></span></a><p>Your Health, Our Reach. Care at Your Doorstep. Convenient mobile blood collection requests in Kenya.</p></div>
+      <div><h3>Explore</h3><div class="footer-links"><a href="#services">Our Services</a><a href="#how">How It Works</a><a href="#about">About Us</a><a href="#faq">FAQs</a><a href="privacy.html">Privacy Policy</a></div></div>
+      <div><h3>Get in touch</h3><div class="footer-links"><a href="tel:+254704173317">+254 704 173 317</a><a href="tel:+254750412126">+254 750 412 126</a><a href="https://wa.me/254750412126" target="_blank" rel="noopener">WhatsApp VitalReach</a><a href="mailto:vitalreachlab@gmail.com">vitalreachlab@gmail.com</a><a href="#booking">Request a Visit</a></div></div>
+    </div>
+    <div class="copyright"><span>© <span id="year"></span> VitalReach Mobile Phlebotomy. All rights reserved.</span><span>Privacy-conscious booking • Kenya</span></div>
+  </div></footer>
+  <a class="whatsapp-float" href="https://wa.me/254750412126" target="_blank" rel="noopener" aria-label="Chat with VitalReach on WhatsApp">WhatsApp Us</a>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('bookingForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const lines = [
+        'Hello VitalReach, I would like to request a mobile blood collection appointment.',
+        '',
+        `Name: ${data.get('fullName')}`,
+        `Phone: ${data.get('phone')}`,
+        `Location: ${data.get('location')}`,
+        `Visit type: ${data.get('visitType')}`,
+        `Preferred date: ${data.get('date') || 'Not specified'}`,
+        `Preferred time: ${data.get('time') || 'Not specified'}`,
+        `Service/test enquiry: ${data.get('service')}`,
+        `Booking notes: ${data.get('message') || 'None'}`
+      ];
+      const url = 'https://wa.me/254750412126?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener,noreferrer');
+      document.getElementById('formStatus').textContent = 'WhatsApp has been opened. Review your request and press Send to contact VitalReach.';
+    });
+  </script>
+</body>
+</html>
